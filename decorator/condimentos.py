@@ -6,6 +6,14 @@ class CondimentoDecorador(Bebida, ABC):
     def __init__(self, bebida):
         self.bebida = bebida
 
+    def set_size(self, size):
+        """Delegar el cambio de tamaño a la bebida envuelta"""
+        self.bebida.set_size(size)
+    
+    def get_size(self):
+        """Delegar la obtención del tamaño a la bebida envuelta"""
+        return self.bebida.get_size()
+
     @abstractmethod
     def obtener_descripcion(self):
         pass

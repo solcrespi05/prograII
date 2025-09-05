@@ -1,9 +1,9 @@
 from bebidas import Bebida, Espresso, CafeNegro, CafeDeLaCasa
-from condimentos import Mocha, Crema, Soja
+from condimentos import Mocha, Crema, Soja, Caramelo
 
 
 def mostrar_pedido(bebida: Bebida) -> None:
-    print(f"{bebida.obtener_descripcion()} -> ${bebida.costo():.2f}")
+    print(f"{bebida.obtener_descripcion()} ({bebida.get_size()}) -> ${bebida.costo():.2f}")
 
 if __name__ == "__main__":
     # Ejemplo 1: Espresso solo
@@ -25,6 +25,7 @@ if __name__ == "__main__":
 
     #Ejemplo 4: Cafe de al casa con Crema y Caramelo
     cafe4: Bebida = CafeDeLaCasa()
+    cafe4.set_size("grande")
     cafe4 = Crema(cafe4)
     cafe4 = Caramelo(cafe4)
     mostrar_pedido(cafe4) 

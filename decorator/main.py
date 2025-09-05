@@ -1,6 +1,19 @@
 from bebidas import Bebida, Espresso, CafeNegro, CafeDeLaCasa
 from condimentos import Mocha, Crema, Soja, Caramelo, DobleMocha
 
+def builder(base, size="chico", condimentos=None):
+    """
+    podes hacer la bebida en una sola línea
+    """
+    bebida = base()
+    bebida.set_size(size)
+
+    if condimentos:
+        for cond in condimentos:
+            bebida = cond(bebida)
+
+    return bebida
+
 
 def mostrar_pedido(bebida: Bebida) -> None:
     print(f"{bebida.obtener_descripcion()} ({bebida.get_size()}) -> ${bebida.costo():.2f}")
@@ -19,7 +32,7 @@ if __name__ == "__main__":
 
     # Ejemplo 3: Café de la Casa con Soja y Crema
     cafe3: Bebida = CafeDeLaCasa()
-    cafe3.set_size("mediano")
+    cafe3.set_size("")
     cafe3 = Soja(cafe3)
     cafe3 = Crema(cafe3)
     mostrar_pedido(cafe3)
@@ -31,3 +44,6 @@ if __name__ == "__main__":
     cafe4 = Caramelo(cafe4)
     mostrar_pedido(cafe4) 
 
+    #Ejemplo del builder
+    cafe5: Bebida = builder(Espresso, "grande", [Mocha, Crema])
+    mostrar_pedido(cafe5)

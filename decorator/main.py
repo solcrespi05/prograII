@@ -1,5 +1,5 @@
 from bebidas import Bebida, Espresso, CafeNegro, CafeDeLaCasa
-from condimentos import Mocha, Crema, Soja, Caramelo
+from condimentos import Mocha, Crema, Soja, Caramelo, DobleMocha
 
 
 def mostrar_pedido(bebida: Bebida) -> None:
@@ -19,14 +19,15 @@ if __name__ == "__main__":
 
     # Ejemplo 3: Café de la Casa con Soja y Crema
     cafe3: Bebida = CafeDeLaCasa()
+    cafe3.set_size("mediano")
     cafe3 = Soja(cafe3)
     cafe3 = Crema(cafe3)
     mostrar_pedido(cafe3)
 
-    #Ejemplo 4: Cafe de al casa con Crema y Caramelo
+    #Ejemplo 4: Cafe de al casa grande con Doble Mocha y Caramelo
     cafe4: Bebida = CafeDeLaCasa()
     cafe4.set_size("grande")
-    cafe4 = Crema(cafe4)
+    cafe4 = DobleMocha(cafe4)
     cafe4 = Caramelo(cafe4)
     mostrar_pedido(cafe4) 
 

@@ -49,3 +49,11 @@ class Caramelo(CondimentoDecorador):
     
     def costo(self):
         return self.bebida.costo() + 0.20
+
+class DobleMocha(CondimentoDecorador):
+    def obtener_descripcion(self):
+        return f"{self.bebida.obtener_descripcion()}, Doble Mocha"
+    
+    def costo(self):
+        return self.bebida.costo() + 0.60
+    

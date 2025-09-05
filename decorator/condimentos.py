@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from decorator.bebidas import Bebida
+from bebidas import Bebida
 
 # Decorador base: cualquier condimento envuelve una bebida
 class CondimentoDecorador(Bebida, ABC):
@@ -34,3 +34,10 @@ class Soja(CondimentoDecorador):  # leche de soja
 
     def costo(self):
         return self.bebida.costo() + 0.25
+
+class Caramelo(CondimentoDecorador):
+    def obtener_descripcion(self):
+        return f"{self.bebida.obtener_descripcion()}, Caramelo"
+    
+    def costo(self):
+        return self.bebida.costo() + 0.20

@@ -19,7 +19,7 @@ class CondimentoDecorador(Bebida, ABC):
         pass
 
 
-# --- Condimentos concretos ---
+# Condimentos 
 class Mocha(CondimentoDecorador):  # chocolate
     def obtener_descripcion(self):
         return f"{self.bebida.obtener_descripcion()}, Mocha"
@@ -43,7 +43,7 @@ class Soja(CondimentoDecorador):  # leche de soja
     def costo(self):
         return self.bebida.costo() + 0.25
 
-class Caramelo(CondimentoDecorador):
+class Caramelo(CondimentoDecorador): 
     def obtener_descripcion(self):
         return f"{self.bebida.obtener_descripcion()}, Caramelo"
     

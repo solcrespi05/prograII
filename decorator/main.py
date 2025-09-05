@@ -25,6 +25,7 @@ if __name__ == "__main__":
 
     # Ejemplo 2: Café Negro con 2 Mocha y Crema
     cafe2: Bebida = CafeNegro()   # la variable es de tipo Bebida, listo
+    cafe2.set_size("grande")  
     cafe2 = Mocha(cafe2)          # le pongo un Mocha
     cafe2 = Mocha(cafe2)          # otro Mocha más
     cafe2 = Crema(cafe2)          # y crema por arriba
@@ -32,7 +33,7 @@ if __name__ == "__main__":
 
     # Ejemplo 3: Café de la Casa con Soja y Crema
     cafe3: Bebida = CafeDeLaCasa()
-    cafe3.set_size("")
+    cafe3.set_size("mediano")
     cafe3 = Soja(cafe3)
     cafe3 = Crema(cafe3)
     mostrar_pedido(cafe3)
@@ -45,5 +46,7 @@ if __name__ == "__main__":
     mostrar_pedido(cafe4) 
 
     #Ejemplo del builder
-    cafe5: Bebida = builder(Espresso, "grande", [Mocha, Crema])
+    cafe5: Bebida = builder(CafeNegro, "grande", [Mocha, Mocha,Crema])
     mostrar_pedido(cafe5)
+
+

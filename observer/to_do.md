@@ -1,7 +1,7 @@
 # TO-DO: Ejercicio - Refactorizar al Modelo Pull del Patrón Observer
 
 En este ejercicio, modificaremos la implementación actual del Patrón Observer, que utiliza un modelo "Push" (donde el Sujeto envía los datos a los Observadores), para convertirla en un modelo "Pull" (donde el Sujeto solo notifica el cambio, y los Observadores solicitan activamente los datos que necesitan).
-.
+
 ## Objetivos del Ejercicio:
 
 * Comprender las diferencias prácticas entre los modelos Push y Pull.

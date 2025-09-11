@@ -23,3 +23,16 @@ class ClamPizza(Pizza):
         print(f"Preparing {self.name}")
         self.dough=self.f.create_dough(); self.sauce=self.f.create_sauce(); self.cheese=self.f.create_cheese(); self.clam=self.f.create_clam()
         print(" ->", self.dough, "/", self.sauce, "/", self.cheese, "/", self.clam)
+
+#nuevas pizzas
+class VeggiePizza(Pizza):
+    def prepare(self):
+        print(f"Preparing {self.name}")
+        self.dough=self.f.create_dough(); self.sauce=self.f.create_sauce(); self.cheese=self.f.create_cheese(); self.veggie=self.f.create_veggie()
+        print(" ->", self.dough, "/", self.sauce, "/", self.cheese, "/", self.veggie)
+
+class PepperoniPizza(Pizza):
+    def prepare(self):
+        print(f"Preparing {self.name}")
+        self.dough=self.f.create_dough(); self.sauce=self.f.create_sauce(); self.cheese=self.f.create_cheese(); self.pepperoni=self.f.create_peperonni()
+        print(" ->", self.dough, "/", self.sauce, "/", self.cheese, "/", self.pepperoni)

@@ -1,10 +1,20 @@
+# Decorador genérico para N condimentos
 from abc import ABC, abstractmethod
 from bebidas import Bebida
 
 # Decorador base: cualquier condimento envuelve una bebida
 class CondimentoDecorador(Bebida, ABC):
     def __init__(self, bebida):
+        super().__init__()
         self.bebida = bebida
+
+    @abstractmethod
+    def obtener_descripcion(self):
+        pass
+    
+
+    def costo(self):
+        return self.bebida.costo() + self.cantidad * self.costo_unitario
 
     def set_size(self, size):
         """Delegar el cambio de tamaño a la bebida envuelta"""
@@ -26,6 +36,7 @@ class Mocha(CondimentoDecorador):  # chocolate
 
     def costo(self):
         return self.bebida.costo() + 0.30
+
 
 
 class Crema(CondimentoDecorador):  # crema batida
@@ -56,4 +67,3 @@ class DobleMocha(CondimentoDecorador):
     
     def costo(self):
         return self.bebida.costo() + 0.60
-    

@@ -42,12 +42,16 @@ class NYPizzaIngredientFactory(PizzaIngredientFactory):
     def create_sauce(self) -> Sauce:  return Sauce("Marinara Sauce")
     def create_cheese(self) -> Cheese:return Cheese("Reggiano Cheese")
     def create_clam(self) -> Clams:   return Clams("Fresh Clams")
+    def create_peperonni(self) -> Pepperoni: return Pepperoni("Sliced Pepperoni")
+    def create_veggie(self) -> Veggies: return Veggies("Grilled Veggies")
 
 class ChicagoPizzaIngredientFactory(PizzaIngredientFactory):
     def create_dough(self) -> Dough:  return Dough("Thick Crust Dough")
     def create_sauce(self) -> Sauce:  return Sauce("Plum Tomato Sauce")
     def create_cheese(self) -> Cheese:return Cheese("Mozzarella Cheese")
     def create_clam(self) -> Clams:   return Clams("Frozen Clams")
+    def create_peperonni(self) -> Pepperoni: return Pepperoni("Sliced Pepperoni, Onion, Mushrooms")
+    def create_veggie(self) -> Veggies: return Veggies("Spinach, Eggplant")
 
 class NYStyleVeggiePizzaIngredientFactory(PizzaIngredientFactory):
     def create_dough(self) -> Dough:  return Dough("Thin Crust Dough")

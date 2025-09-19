@@ -6,7 +6,7 @@
 
 ## Descripción general
 
-La carpeta `factory` contiene tres implementaciones del patrón de creación de objetos para una pizzería: **Simple Factory**, **Factory Method** y **Abstract Factory**. Cada subcarpeta muestra una evolución en la flexibilidad y el desacoplamiento del código
+La carpeta `factory` contiene tres implementaciones del patrón de creación de objetos para una pizzería: **Simple Factory**, **Factory Method** y **Abstract Factory**.
 
 ### Estructura
 

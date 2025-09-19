@@ -1,6 +1,6 @@
 # Carpeta factory - UML y Descripción
 
-## UML de la arquitectura (ver imagen adjunta)
+## UML de la arquitectura
 
 ![UML de la carpeta factory](image.png)
 

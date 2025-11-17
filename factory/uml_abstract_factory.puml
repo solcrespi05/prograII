@@ -1,0 +1,46 @@
+@startuml abstract_factory
+package factory_abstract_factory {
+  abstract class PizzaStore
+  class NYPizzaStore
+  class ChicagoPizzaStore
+  abstract class Pizza
+  class CheesePizza
+  class ClamPizza
+  class VeggiePizza
+  class PepperoniPizza
+  abstract class PizzaIngredientFactory
+  class NYPizzaIngredientFactory
+  class ChicagoPizzaIngredientFactory
+  class Dough
+  class Sauce
+  class Cheese
+  class Clams
+  class Pepperoni
+  class Veggies
+
+  PizzaStore <|-- NYPizzaStore
+  PizzaStore <|-- ChicagoPizzaStore
+  PizzaStore --> Pizza
+  Pizza <|-- CheesePizza
+  Pizza <|-- ClamPizza
+  Pizza <|-- VeggiePizza
+  Pizza <|-- PepperoniPizza
+  Pizza --> PizzaIngredientFactory
+  PizzaIngredientFactory <|-- NYPizzaIngredientFactory
+  PizzaIngredientFactory <|-- ChicagoPizzaIngredientFactory
+
+  NYPizzaIngredientFactory --> Dough
+  NYPizzaIngredientFactory --> Sauce
+  NYPizzaIngredientFactory --> Cheese
+  NYPizzaIngredientFactory --> Clams
+  NYPizzaIngredientFactory --> Pepperoni
+  NYPizzaIngredientFactory --> Veggies
+
+  ChicagoPizzaIngredientFactory --> Dough
+  ChicagoPizzaIngredientFactory --> Sauce
+  ChicagoPizzaIngredientFactory --> Cheese
+  ChicagoPizzaIngredientFactory --> Clams
+  ChicagoPizzaIngredientFactory --> Pepperoni
+  ChicagoPizzaIngredientFactory --> Veggies
+}
+@enduml
